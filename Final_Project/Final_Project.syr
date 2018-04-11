@@ -1,0 +1,1105 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Final_Project.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Final_Project.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Final_Project"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Final_Project
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "key_0416033.v" in library work
+Compiling verilog file "attack.v" in library work
+Module <keyboard> compiled
+Compiling verilog file "Final_Project.v" in library work
+Module <attack> compiled
+Module <Final_Project> compiled
+No errors in compilation
+Analysis of file <"Final_Project.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Final_Project> in library <work> with parameters.
+	BBOLT = "00000000000000000000000000000001"
+	LAZER = "00000000000000000000000000000010"
+	SBOLT = "00000000000000000000000000000000"
+	VICTORY = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <keyboard> in library <work>.
+
+Analyzing hierarchy for module <attack> in library <work> with parameters.
+	BBOLT = "00000000000000000000000000000001"
+	LAZER = "00000000000000000000000000000010"
+	SBOLT = "00000000000000000000000000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Final_Project>.
+	BBOLT = 32'sb00000000000000000000000000000001
+	LAZER = 32'sb00000000000000000000000000000010
+	SBOLT = 32'sb00000000000000000000000000000000
+	VICTORY = 32'sb00000000000000000000000000000011
+INFO:Xst:1432 - Contents of array <over> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <over> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <win> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <win> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <Final_Project> is correct for synthesis.
+ 
+Analyzing module <keyboard> in library <work>.
+Module <keyboard> is correct for synthesis.
+ 
+Analyzing module <attack> in library <work>.
+	BBOLT = 32'sb00000000000000000000000000000001
+	LAZER = 32'sb00000000000000000000000000000010
+	SBOLT = 32'sb00000000000000000000000000000000
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ball> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ball> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <attack> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <keyboard>.
+    Related source file is "key_0416033.v".
+WARNING:Xst:646 - Signal <key<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit register for signal <k_value>.
+    Found 1-bit register for signal <arrow>.
+    Found 1-bit register for signal <Break>.
+    Found 1-bit register for signal <c_state>.
+    Found 1-bit xor9 for signal <check>.
+    Found 4-bit up counter for signal <k_cnt>.
+    Found 11-bit register for signal <key>.
+    Found 1-bit register for signal <n_state>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <keyboard> synthesized.
+
+
+Synthesizing Unit <attack>.
+    Related source file is "attack.v".
+WARNING:Xst:643 - "attack.v" line 56: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "attack.v" line 60: The result of a 14x6-bit multiplication is partially used. Only the 19 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 441x1-bit ROM for signal <$varindex0000> created at line 56.
+    Found 441x1-bit ROM for signal <$varindex0001> created at line 56.
+    Found 441x1-bit ROM for signal <$varindex0002> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0003> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0004> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0005> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0006> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0007> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0008> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0009> created at line 60.
+    Found 441x1-bit ROM for signal <$varindex0010> created at line 60.
+    Found 10-bit adder for signal <$add0019> created at line 73.
+    Found 13-bit adder for signal <$add0020> created at line 73.
+    Found 27-bit adder for signal <$add0026> created at line 91.
+    Found 12-bit adder for signal <$sub0000> created at line 56.
+    Found 12-bit adder for signal <$sub0001> created at line 56.
+    Found 12-bit adder for signal <$sub0002> created at line 60.
+    Found 12-bit adder for signal <$sub0003> created at line 60.
+    Found 14-bit subtractor for signal <$sub0004> created at line 56.
+    Found 14-bit subtractor for signal <$sub0005> created at line 60.
+    Found 14-bit subtractor for signal <$sub0006> created at line 60.
+    Found 14-bit subtractor for signal <$sub0007> created at line 60.
+    Found 14-bit subtractor for signal <$sub0008> created at line 60.
+    Found 14-bit subtractor for signal <$sub0009> created at line 60.
+    Found 14-bit subtractor for signal <$sub0010> created at line 60.
+    Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 56.
+    Found 9-bit adder carry out for signal <add0001$addsub0000> created at line 56.
+    Found 9-bit adder carry out for signal <add0002$addsub0000> created at line 56.
+    Found 9-bit adder carry out for signal <add0003$addsub0000> created at line 56.
+    Found 10-bit adder carry out for signal <add0004$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0005$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0006$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0007$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0008$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0009$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0010$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0011$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0012$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0013$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0014$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0015$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0016$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0017$addsub0000> created at line 60.
+    Found 10-bit adder carry out for signal <add0018$addsub0000> created at line 73.
+    Found 8x2-bit multiplier for signal <add0018$mult0000> created at line 73.
+    Found 10-bit adder carry out for signal <add0021$addsub0000> created at line 73.
+    Found 11-bit adder carry out for signal <add0022$addsub0000> created at line 73.
+    Found 8x3-bit multiplier for signal <add0022$mult0000> created at line 73.
+    Found 10-bit adder carry out for signal <add0023$addsub0000> created at line 73.
+    Found 10-bit adder carry out for signal <add0024$addsub0000> created at line 73.
+    Found 10-bit adder carry out for signal <add0025$addsub0000> created at line 73.
+    Found 13-bit subtractor for signal <add0026$addsub0000> created at line 91.
+    Found 13-bit subtractor for signal <add0026$addsub0001> created at line 91.
+    Found 13x13-bit multiplier for signal <add0026$mult0000> created at line 91.
+    Found 13x13-bit multiplier for signal <add0026$mult0001> created at line 91.
+    Found 12-bit adder for signal <area$addsub0000> created at line 60.
+    Found 12-bit adder for signal <area$addsub0001> created at line 60.
+    Found 13-bit adder for signal <area$addsub0002> created at line 73.
+    Found 13-bit adder for signal <area$addsub0003> created at line 73.
+    Found 13-bit adder for signal <area$addsub0004> created at line 73.
+    Found 13-bit adder for signal <area$addsub0005> created at line 73.
+    Found 13-bit adder for signal <area$addsub0006> created at line 73.
+    Found 13-bit adder for signal <area$addsub0007> created at line 73.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0000> created at line 56.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0001> created at line 56.
+    Found 12-bit comparator greatequal for signal <area$cmp_ge0002> created at line 56.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0003> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0004> created at line 60.
+    Found 12-bit comparator greatequal for signal <area$cmp_ge0005> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0006> created at line 60.
+    Found 12-bit comparator greatequal for signal <area$cmp_ge0007> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0008> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0009> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0010> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0011> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0012> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0013> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0014> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0015> created at line 60.
+    Found 13-bit comparator greatequal for signal <area$cmp_ge0016> created at line 60.
+    Found 13-bit comparator greater for signal <area$cmp_gt0000> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0001> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0002> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0003> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0004> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0005> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0006> created at line 73.
+    Found 13-bit comparator greater for signal <area$cmp_gt0007> created at line 82.
+    Found 13-bit comparator greater for signal <area$cmp_gt0008> created at line 82.
+    Found 13-bit comparator greater for signal <area$cmp_gt0009> created at line 82.
+    Found 13-bit comparator greater for signal <area$cmp_gt0010> created at line 85.
+    Found 13-bit comparator greater for signal <area$cmp_gt0011> created at line 85.
+    Found 13-bit comparator greater for signal <area$cmp_gt0012> created at line 85.
+    Found 13-bit comparator greater for signal <area$cmp_gt0013> created at line 85.
+    Found 13-bit comparator greater for signal <area$cmp_gt0014> created at line 88.
+    Found 13-bit comparator greater for signal <area$cmp_gt0015> created at line 88.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0000> created at line 56.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0001> created at line 56.
+    Found 12-bit comparator lessequal for signal <area$cmp_le0002> created at line 56.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0003> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0004> created at line 60.
+    Found 12-bit comparator lessequal for signal <area$cmp_le0005> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0006> created at line 60.
+    Found 12-bit comparator lessequal for signal <area$cmp_le0007> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0008> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0009> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0010> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0011> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0012> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0013> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0014> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0015> created at line 60.
+    Found 13-bit comparator lessequal for signal <area$cmp_le0016> created at line 60.
+    Found 14-bit comparator less for signal <area$cmp_lt0000> created at line 73.
+    Found 14-bit comparator less for signal <area$cmp_lt0001> created at line 73.
+    Found 14-bit comparator less for signal <area$cmp_lt0002> created at line 73.
+    Found 14-bit comparator less for signal <area$cmp_lt0003> created at line 73.
+    Found 14-bit comparator less for signal <area$cmp_lt0004> created at line 73.
+    Found 13-bit comparator less for signal <area$cmp_lt0005> created at line 82.
+    Found 13-bit comparator less for signal <area$cmp_lt0006> created at line 82.
+    Found 13-bit comparator less for signal <area$cmp_lt0007> created at line 82.
+    Found 13-bit comparator less for signal <area$cmp_lt0008> created at line 85.
+    Found 13-bit comparator less for signal <area$cmp_lt0009> created at line 85.
+    Found 13-bit comparator less for signal <area$cmp_lt0010> created at line 85.
+    Found 13-bit comparator less for signal <area$cmp_lt0011> created at line 85.
+    Found 13-bit comparator less for signal <area$cmp_lt0012> created at line 88.
+    Found 13-bit comparator less for signal <area$cmp_lt0013> created at line 88.
+    Found 28-bit comparator less for signal <area$cmp_lt0014> created at line 91.
+    Found 20-bit adder for signal <COND_10$addsub0000> created at line 60.
+    Found 20-bit subtractor for signal <COND_10$addsub0001> created at line 60.
+    Found 20-bit adder for signal <COND_11$addsub0000> created at line 60.
+    Found 20-bit adder for signal <COND_12$addsub0000> created at line 60.
+    Found 20-bit adder for signal <COND_13$addsub0000> created at line 60.
+    Found 20-bit adder for signal <COND_14$addsub0000> created at line 60.
+    Found 20-bit subtractor for signal <COND_14$addsub0001> created at line 60.
+    Found 20-bit adder for signal <COND_15$addsub0000> created at line 60.
+    Found 20-bit subtractor for signal <COND_15$addsub0001> created at line 60.
+    Found 20-bit adder for signal <COND_16$addsub0000> created at line 60.
+    Found 20-bit adder for signal <COND_6$addsub0000> created at line 56.
+    Found 20-bit subtractor for signal <COND_6$sub0000> created at line 56.
+    Found 20-bit adder for signal <COND_8$addsub0000> created at line 60.
+    Found 20-bit adder for signal <COND_9$addsub0000> created at line 60.
+    Found 20-bit subtractor for signal <COND_9$addsub0001> created at line 60.
+    Found 14-bit subtractor for signal <mult0000$addsub0000> created at line 56.
+    Found 14x6-bit multiplier for signal <mult0000$mult0000> created at line 56.
+    Found 14-bit subtractor for signal <mult0001$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0001$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0002$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0002$mult0000> created at line 60.
+    Found 8x2-bit multiplier for signal <mult0003$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0004$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0004$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0005$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0005$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0006$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0006$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0007$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0007$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0008$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0008$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0009$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0009$mult0000> created at line 60.
+    Found 14-bit subtractor for signal <mult0010$addsub0000> created at line 60.
+    Found 14x6-bit multiplier for signal <mult0010$mult0000> created at line 60.
+    Summary:
+	inferred  11 ROM(s).
+	inferred  84 Adder/Subtractor(s).
+	inferred  15 Multiplier(s).
+	inferred  65 Comparator(s).
+Unit <attack> synthesized.
+
+
+Synthesizing Unit <Final_Project>.
+    Related source file is "Final_Project.v".
+    Found 2100x1-bit ROM for signal <$varindex0000> created at line 281.
+    Found 2304x1-bit ROM for signal <$varindex0001> created at line 286.
+    Found 27-bit adder for signal <$add0000> created at line 232.
+    Found 10-bit adder for signal <$add0001> created at line 288.
+    Found 27-bit adder for signal <$add0002> created at line 314.
+    Found 27-bit adder for signal <$add0003> created at line 334.
+    Found 27-bit adder for signal <$add0004> created at line 334.
+    Found 27-bit adder for signal <$add0005> created at line 334.
+    Found 27-bit adder for signal <$add0006> created at line 346.
+    Found 27-bit adder for signal <$add0007> created at line 346.
+    Found 27-bit adder for signal <$add0008> created at line 346.
+    Found 27-bit adder for signal <$add0009> created at line 346.
+    Found 27-bit adder for signal <$add0010> created at line 359.
+    Found 27-bit adder for signal <$add0011> created at line 359.
+    Found 27-bit adder for signal <$add0012> created at line 370.
+    Found 27-bit adder for signal <$add0013> created at line 389.
+    Found 27-bit adder for signal <$add0014> created at line 389.
+    Found 13x9-bit multiplier for signal <$mult0000> created at line 281.
+    Found 13-bit subtractor for signal <$sub0000> created at line 286.
+    Found 13-bit subtractor for signal <$sub0001> created at line 303.
+    Found 15-bit adder for signal <$sub0002>.
+    Found 13-bit subtractor for signal <add0000$addsub0000> created at line 232.
+    Found 13-bit subtractor for signal <add0000$addsub0001> created at line 232.
+    Found 13x13-bit multiplier for signal <add0000$mult0000> created at line 232.
+    Found 13x13-bit multiplier for signal <add0000$mult0001> created at line 232.
+    Found 13-bit subtractor for signal <add0002$addsub0000> created at line 314.
+    Found 13-bit subtractor for signal <add0002$addsub0001> created at line 314.
+    Found 13x13-bit multiplier for signal <add0002$mult0000> created at line 314.
+    Found 13x13-bit multiplier for signal <add0002$mult0001> created at line 314.
+    Found 13-bit subtractor for signal <add0003$addsub0000> created at line 334.
+    Found 13-bit subtractor for signal <add0003$addsub0001> created at line 334.
+    Found 13x13-bit multiplier for signal <add0003$mult0000> created at line 334.
+    Found 13x13-bit multiplier for signal <add0003$mult0001> created at line 334.
+    Found 13-bit subtractor for signal <add0004$addsub0000> created at line 334.
+    Found 13x13-bit multiplier for signal <add0004$mult0000> created at line 334.
+    Found 13-bit subtractor for signal <add0005$addsub0000> created at line 334.
+    Found 13x13-bit multiplier for signal <add0005$mult0000> created at line 334.
+    Found 13-bit subtractor for signal <add0006$addsub0000> created at line 346.
+    Found 13x13-bit multiplier for signal <add0006$mult0000> created at line 346.
+    Found 13-bit subtractor for signal <add0007$addsub0000> created at line 346.
+    Found 13x13-bit multiplier for signal <add0007$mult0000> created at line 346.
+    Found 13-bit subtractor for signal <add0008$addsub0000> created at line 346.
+    Found 13x13-bit multiplier for signal <add0008$mult0000> created at line 346.
+    Found 13-bit subtractor for signal <add0009$addsub0000> created at line 346.
+    Found 13x13-bit multiplier for signal <add0009$mult0000> created at line 346.
+    Found 13-bit subtractor for signal <add0010$addsub0000> created at line 359.
+    Found 13-bit subtractor for signal <add0010$addsub0001> created at line 359.
+    Found 13x13-bit multiplier for signal <add0010$mult0000> created at line 359.
+    Found 13x13-bit multiplier for signal <add0010$mult0001> created at line 359.
+    Found 13-bit subtractor for signal <add0011$addsub0000> created at line 359.
+    Found 13x13-bit multiplier for signal <add0011$mult0000> created at line 359.
+    Found 13-bit subtractor for signal <add0012$addsub0000> created at line 370.
+    Found 13x13-bit multiplier for signal <add0012$mult0000> created at line 370.
+    Found 13-bit subtractor for signal <add0013$addsub0000> created at line 389.
+    Found 13x13-bit multiplier for signal <add0013$mult0000> created at line 389.
+    Found 16-bit adder for signal <add0015$add0000> created at line 303.
+    Found 13-bit adder for signal <add0016$add0000> created at line 303.
+    Found 17-bit adder for signal <add0017$add0000> created at line 303.
+    Found 13-bit adder for signal <add0018$add0000> created at line 303.
+    Found 13-bit adder for signal <add0019$add0000> created at line 309.
+    Found 1-bit register for signal <B>.
+    Found 8-bit register for signal <bbolt_run>.
+    Found 8-bit adder for signal <bbolt_run$addsub0000> created at line 131.
+    Found 12-bit register for signal <bull_X>.
+    Found 12-bit register for signal <bull_Y>.
+    Found 12-bit addsub for signal <bull_Y$mux0000>.
+    Found 8-bit up counter for signal <cbolt_run>.
+    Found 12-bit up counter for signal <col>.
+    Found 23-bit adder for signal <COND_3$addsub0000> created at line 281.
+    Found 23-bit adder for signal <COND_4$addsub0000> created at line 286.
+    Found 31-bit up counter for signal <cooldown>.
+    Found 1-bit register for signal <die>.
+    Found 1-bit register for signal <down>.
+    Found 1-bit register for signal <G>.
+    Found 9-bit down accumulator for signal <health>.
+    Found 28-bit comparator greatequal for signal <health$cmp_ge0000> created at line 275.
+    Found 1-bit register for signal <hit>.
+    Found 10-bit comparator greater for signal <hit$cmp_gt0000> created at line 232.
+    Found 13-bit comparator less for signal <hit$cmp_lt0000> created at line 234.
+    Found 28-bit comparator less for signal <hit$cmp_lt0001> created at line 232.
+    Found 3-bit register for signal <lazer>.
+    Found 1-bit register for signal <left>.
+    Found 2-bit register for signal <mode>.
+    Found 13-bit subtractor for signal <mult0000$addsub0000> created at line 281.
+    Found 1-bit register for signal <n_state>.
+    Found 31-bit comparator greater for signal <n_state$cmp_gt0000> created at line 224.
+    Found 1-bit register for signal <R>.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0000> created at line 370.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0001> created at line 370.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0002> created at line 370.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0003> created at line 281.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0004> created at line 281.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0005> created at line 286.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0006> created at line 286.
+    Found 16-bit comparator greatequal for signal <R$cmp_ge0007> created at line 303.
+    Found 17-bit comparator greatequal for signal <R$cmp_ge0008> created at line 303.
+    Found 13-bit comparator greatequal for signal <R$cmp_ge0009> created at line 303.
+    Found 13-bit comparator greater for signal <R$cmp_gt0000> created at line 288.
+    Found 13-bit comparator greater for signal <R$cmp_gt0001> created at line 288.
+    Found 12-bit comparator greater for signal <R$cmp_gt0002> created at line 293.
+    Found 13-bit comparator greater for signal <R$cmp_gt0003> created at line 298.
+    Found 13-bit comparator greater for signal <R$cmp_gt0004> created at line 298.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0000> created at line 370.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0001> created at line 370.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0002> created at line 370.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0003> created at line 303.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0004> created at line 303.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0005> created at line 309.
+    Found 28-bit comparator less for signal <R$cmp_lt0000> created at line 334.
+    Found 28-bit comparator less for signal <R$cmp_lt0001> created at line 334.
+    Found 28-bit comparator less for signal <R$cmp_lt0002> created at line 334.
+    Found 28-bit comparator less for signal <R$cmp_lt0003> created at line 346.
+    Found 28-bit comparator less for signal <R$cmp_lt0004> created at line 346.
+    Found 28-bit comparator less for signal <R$cmp_lt0005> created at line 346.
+    Found 28-bit comparator less for signal <R$cmp_lt0006> created at line 346.
+    Found 28-bit comparator less for signal <R$cmp_lt0007> created at line 359.
+    Found 28-bit comparator less for signal <R$cmp_lt0008> created at line 359.
+    Found 28-bit comparator less for signal <R$cmp_lt0009> created at line 370.
+    Found 28-bit comparator less for signal <R$cmp_lt0010> created at line 389.
+    Found 28-bit comparator less for signal <R$cmp_lt0011> created at line 389.
+    Found 13-bit comparator less for signal <R$cmp_lt0012> created at line 281.
+    Found 13-bit comparator less for signal <R$cmp_lt0013> created at line 281.
+    Found 13-bit comparator less for signal <R$cmp_lt0014> created at line 286.
+    Found 13-bit comparator less for signal <R$cmp_lt0015> created at line 286.
+    Found 12-bit comparator less for signal <R$cmp_lt0016> created at line 288.
+    Found 13-bit comparator less for signal <R$cmp_lt0017> created at line 288.
+    Found 13-bit comparator less for signal <R$cmp_lt0018> created at line 293.
+    Found 13-bit comparator less for signal <R$cmp_lt0019> created at line 298.
+    Found 13-bit comparator less for signal <R$cmp_lt0020> created at line 298.
+    Found 28-bit comparator less for signal <R$cmp_lt0021> created at line 314.
+    Found 1-bit register for signal <right>.
+    Found 12-bit up counter for signal <row>.
+    Found 8-bit register for signal <sbolt_run>.
+    Found 8-bit adder for signal <sbolt_run$addsub0000> created at line 113.
+    Found 31-bit up counter for signal <sec_cnt>.
+    Found 12-bit register for signal <ship_X>.
+    Found 12-bit adder for signal <ship_X$addsub0000> created at line 197.
+    Found 12-bit subtractor for signal <ship_X$sub0000> created at line 197.
+    Found 12-bit register for signal <ship_Y>.
+    Found 12-bit adder for signal <ship_Y$addsub0000> created at line 198.
+    Found 12-bit subtractor for signal <ship_Y$sub0000> created at line 198.
+    Found 1-bit register for signal <shoot>.
+    Found 13-bit subtractor for signal <sub0003$sub0000> created at line 303.
+    Found 1-bit register for signal <up>.
+    Found 13-bit comparator greatequal for signal <VGA_HSYNC$cmp_ge0000> created at line 45.
+    Found 13-bit comparator less for signal <VGA_HSYNC$cmp_lt0000> created at line 45.
+    Found 13-bit comparator greatequal for signal <VGA_VSYNC$cmp_ge0000> created at line 46.
+    Found 13-bit comparator less for signal <VGA_VSYNC$cmp_lt0000> created at line 46.
+    Found 1-bit register for signal <victory>.
+    Found 10-bit comparator lessequal for signal <victory$cmp_le0000> created at line 271.
+    Found 12-bit subtractor for signal <x$addsub0000> created at line 43.
+    Found 13-bit comparator greater for signal <x$cmp_gt0000> created at line 43.
+    Found 13-bit comparator lessequal for signal <x$cmp_le0000> created at line 43.
+    Found 12-bit subtractor for signal <y$addsub0000> created at line 44.
+    Found 13-bit comparator greater for signal <y$cmp_gt0000> created at line 44.
+    Found 13-bit comparator lessequal for signal <y$cmp_le0000> created at line 44.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   5 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred  33 D-type flip-flop(s).
+	inferred  55 Adder/Subtractor(s).
+	inferred  18 Multiplier(s).
+	inferred  57 Comparator(s).
+Unit <Final_Project> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 24
+ 2100x1-bit ROM                                        : 1
+ 2304x1-bit ROM                                        : 1
+ 441x1-bit ROM                                         : 22
+# Multipliers                                          : 48
+ 13x13-bit multiplier                                  : 21
+ 13x9-bit multiplier                                   : 1
+ 14x6-bit multiplier                                   : 20
+ 8x2-bit multiplier                                    : 4
+ 8x3-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 223
+ 10-bit adder                                          : 3
+ 10-bit adder carry out                                : 38
+ 11-bit adder carry out                                : 2
+ 12-bit adder                                          : 14
+ 12-bit addsub                                         : 1
+ 12-bit subtractor                                     : 4
+ 13-bit adder                                          : 17
+ 13-bit subtractor                                     : 25
+ 14-bit subtractor                                     : 34
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 26
+ 20-bit subtractor                                     : 26
+ 23-bit adder                                          : 2
+ 23-bit subtractor                                     : 2
+ 27-bit adder                                          : 16
+ 8-bit adder                                           : 2
+ 9-bit adder carry out                                 : 8
+# Counters                                             : 6
+ 12-bit up counter                                     : 2
+ 31-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 9-bit down accumulator                                : 1
+# Registers                                            : 26
+ 1-bit register                                        : 16
+ 10-bit register                                       : 1
+ 11-bit register                                       : 1
+ 12-bit register                                       : 4
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 187
+ 10-bit comparator greater                             : 1
+ 10-bit comparator lessequal                           : 1
+ 12-bit comparator greatequal                          : 6
+ 12-bit comparator greater                             : 1
+ 12-bit comparator less                                : 1
+ 12-bit comparator lessequal                           : 6
+ 13-bit comparator greatequal                          : 38
+ 13-bit comparator greater                             : 38
+ 13-bit comparator less                                : 29
+ 13-bit comparator lessequal                           : 36
+ 14-bit comparator less                                : 10
+ 16-bit comparator greatequal                          : 1
+ 17-bit comparator greatequal                          : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 16
+ 31-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <key_0> of sequential type is unconnected in block <keyboard>.
+WARNING:Xst:2677 - Node <key_0> of sequential type is unconnected in block <keyboard>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 24
+ 2100x1-bit ROM                                        : 1
+ 2304x1-bit ROM                                        : 1
+ 441x1-bit ROM                                         : 22
+# Multipliers                                          : 48
+ 13x13-bit multiplier                                  : 21
+ 13x9-bit multiplier                                   : 1
+ 14x6-bit multiplier                                   : 20
+ 8x2-bit multiplier                                    : 4
+ 8x3-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 223
+ 10-bit adder                                          : 3
+ 10-bit adder carry out                                : 38
+ 11-bit adder carry out                                : 2
+ 12-bit adder                                          : 16
+ 12-bit addsub                                         : 1
+ 12-bit subtractor                                     : 6
+ 13-bit adder                                          : 17
+ 13-bit subtractor                                     : 24
+ 14-bit subtractor                                     : 34
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 27-bit adder                                          : 16
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 26
+ 9-bit adder carry out                                 : 8
+ 9-bit subtractor                                      : 26
+# Counters                                             : 6
+ 12-bit up counter                                     : 2
+ 31-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 9-bit down accumulator                                : 1
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Comparators                                          : 187
+ 10-bit comparator greater                             : 1
+ 10-bit comparator lessequal                           : 1
+ 12-bit comparator greatequal                          : 6
+ 12-bit comparator greater                             : 1
+ 12-bit comparator less                                : 1
+ 12-bit comparator lessequal                           : 6
+ 13-bit comparator greatequal                          : 38
+ 13-bit comparator greater                             : 38
+ 13-bit comparator less                                : 29
+ 13-bit comparator lessequal                           : 36
+ 14-bit comparator less                                : 10
+ 16-bit comparator greatequal                          : 1
+ 17-bit comparator greatequal                          : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 16
+ 31-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <health_0> (without init value) has a constant value of 0 in block <Final_Project>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Final_Project> ...
+
+Optimizing unit <keyboard> ...
+
+Optimizing unit <attack> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Final_Project, actual ratio is 75.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 211
+ Flip-Flops                                            : 211
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Final_Project.ngr
+Top Level Output File Name         : Final_Project
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 12872
+#      GND                         : 1
+#      INV                         : 436
+#      LUT1                        : 312
+#      LUT2                        : 2004
+#      LUT2_D                      : 14
+#      LUT2_L                      : 5
+#      LUT3                        : 1392
+#      LUT3_D                      : 9
+#      LUT3_L                      : 15
+#      LUT4                        : 1764
+#      LUT4_D                      : 41
+#      LUT4_L                      : 56
+#      MULT_AND                    : 154
+#      MUXCY                       : 3915
+#      MUXF5                       : 227
+#      MUXF6                       : 81
+#      MUXF7                       : 27
+#      MUXF8                       : 1
+#      VCC                         : 1
+#      XORCY                       : 2417
+# FlipFlops/Latches                : 211
+#      FDC                         : 113
+#      FDCE                        : 39
+#      FDCP                        : 12
+#      FDCPE                       : 12
+#      FDP                         : 5
+#      FDPE                        : 3
+#      FDR                         : 24
+#      FDS                         : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 3
+#      OBUF                        : 5
+# MULTs                            : 20
+#      MULT18X18SIO                : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     3218  out of   4656    69%  
+ Number of Slice Flip Flops:            211  out of   9312     2%  
+ Number of 4 input LUTs:               6048  out of   9312    64%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+ Number of MULT18X18SIOs:                20  out of     20   100%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 129   |
+sec_cnt_181                        | BUFG                   | 82    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+------------------------+-------+
+Control Signal                           | Buffer(FF name)        | Load  |
+-----------------------------------------+------------------------+-------+
+rst                                      | IBUF                   | 160   |
+bull_X_0__and0000(bull_X_0__and00001:O)  | NONE(bull_X_0)         | 1     |
+bull_X_0__and0001(bull_X_0__and00011:O)  | NONE(bull_X_0)         | 1     |
+bull_X_10__and0000(bull_X_10__and00001:O)| NONE(bull_X_10)        | 1     |
+bull_X_10__and0001(bull_X_10__and00011:O)| NONE(bull_X_10)        | 1     |
+bull_X_11__and0000(bull_X_11__and00001:O)| NONE(bull_X_11)        | 1     |
+bull_X_11__and0001(bull_X_11__and00011:O)| NONE(bull_X_11)        | 1     |
+bull_X_1__and0000(bull_X_1__and00001:O)  | NONE(bull_X_1)         | 1     |
+bull_X_1__and0001(bull_X_1__and00011:O)  | NONE(bull_X_1)         | 1     |
+bull_X_2__and0000(bull_X_2__and00001:O)  | NONE(bull_X_2)         | 1     |
+bull_X_2__and0001(bull_X_2__and00011:O)  | NONE(bull_X_2)         | 1     |
+bull_X_3__and0000(bull_X_3__and00001:O)  | NONE(bull_X_3)         | 1     |
+bull_X_3__and0001(bull_X_3__and00011:O)  | NONE(bull_X_3)         | 1     |
+bull_X_4__and0000(bull_X_4__and00001:O)  | NONE(bull_X_4)         | 1     |
+bull_X_4__and0001(bull_X_4__and00011:O)  | NONE(bull_X_4)         | 1     |
+bull_X_5__and0000(bull_X_5__and00001:O)  | NONE(bull_X_5)         | 1     |
+bull_X_5__and0001(bull_X_5__and00011:O)  | NONE(bull_X_5)         | 1     |
+bull_X_6__and0000(bull_X_6__and00001:O)  | NONE(bull_X_6)         | 1     |
+bull_X_6__and0001(bull_X_6__and00011:O)  | NONE(bull_X_6)         | 1     |
+bull_X_7__and0000(bull_X_7__and00001:O)  | NONE(bull_X_7)         | 1     |
+bull_X_7__and0001(bull_X_7__and00011:O)  | NONE(bull_X_7)         | 1     |
+bull_X_8__and0000(bull_X_8__and00001:O)  | NONE(bull_X_8)         | 1     |
+bull_X_8__and0001(bull_X_8__and00011:O)  | NONE(bull_X_8)         | 1     |
+bull_X_9__and0000(bull_X_9__and00001:O)  | NONE(bull_X_9)         | 1     |
+bull_X_9__and0001(bull_X_9__and00011:O)  | NONE(bull_X_9)         | 1     |
+bull_Y_0__and0000(bull_Y_0__and00001:O)  | NONE(bull_Y_0)         | 1     |
+bull_Y_0__and0001(bull_Y_0__and00011:O)  | NONE(bull_Y_0)         | 1     |
+bull_Y_10__and0000(bull_Y_10__and00001:O)| NONE(bull_Y_10)        | 1     |
+bull_Y_10__and0001(bull_Y_10__and00011:O)| NONE(bull_Y_10)        | 1     |
+bull_Y_11__and0000(bull_Y_11__and00001:O)| NONE(bull_Y_11)        | 1     |
+bull_Y_11__and0001(bull_Y_11__and00011:O)| NONE(bull_Y_11)        | 1     |
+bull_Y_1__and0000(bull_Y_1__and00001:O)  | NONE(bull_Y_1)         | 1     |
+bull_Y_1__and0001(bull_Y_1__and00011:O)  | NONE(bull_Y_1)         | 1     |
+bull_Y_2__and0000(bull_Y_2__and00001:O)  | NONE(bull_Y_2)         | 1     |
+bull_Y_2__and0001(bull_Y_2__and00011:O)  | NONE(bull_Y_2)         | 1     |
+bull_Y_3__and0000(bull_Y_3__and00001:O)  | NONE(bull_Y_3)         | 1     |
+bull_Y_3__and0001(bull_Y_3__and00011:O)  | NONE(bull_Y_3)         | 1     |
+bull_Y_4__and0000(bull_Y_4__and00001:O)  | NONE(bull_Y_4)         | 1     |
+bull_Y_4__and0001(bull_Y_4__and00011:O)  | NONE(bull_Y_4)         | 1     |
+bull_Y_5__and0000(bull_Y_5__and00001:O)  | NONE(bull_Y_5)         | 1     |
+bull_Y_5__and0001(bull_Y_5__and00011:O)  | NONE(bull_Y_5)         | 1     |
+bull_Y_6__and0000(bull_Y_6__and00001:O)  | NONE(bull_Y_6)         | 1     |
+bull_Y_6__and0001(bull_Y_6__and00011:O)  | NONE(bull_Y_6)         | 1     |
+bull_Y_7__and0000(bull_Y_7__and00001:O)  | NONE(bull_Y_7)         | 1     |
+bull_Y_7__and0001(bull_Y_7__and00011:O)  | NONE(bull_Y_7)         | 1     |
+bull_Y_8__and0000(bull_Y_8__and00001:O)  | NONE(bull_Y_8)         | 1     |
+bull_Y_8__and0001(bull_Y_8__and00011:O)  | NONE(bull_Y_8)         | 1     |
+bull_Y_9__and0000(bull_Y_9__and00001:O)  | NONE(bull_Y_9)         | 1     |
+bull_Y_9__and0001(bull_Y_9__and00011:O)  | NONE(bull_Y_9)         | 1     |
+-----------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 34.091ns (Maximum Frequency: 29.333MHz)
+   Minimum input arrival time before clock: 12.375ns
+   Maximum output required time after clock: 9.222ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 34.091ns (frequency: 29.333MHz)
+  Total number of paths / destination ports: 72960695539 / 186
+-------------------------------------------------------------------------
+Delay:               34.091ns (Levels of Logic = 37)
+  Source:            row_1 (FF)
+  Destination:       G (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: row_1 to G
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.591   0.932  row_1 (row_1)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_y_cmp_gt0000_lut<1> (Mcompar_y_cmp_gt0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_y_cmp_gt0000_cy<1> (Mcompar_y_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_y_cmp_gt0000_cy<2> (Mcompar_y_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_y_cmp_gt0000_cy<3> (Mcompar_y_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_y_cmp_gt0000_cy<4> (Mcompar_y_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_y_cmp_gt0000_cy<5> (Mcompar_y_cmp_gt0000_cy<5>)
+     MUXCY:CI->O         397   0.459   1.552  Mcompar_y_cmp_gt0000_cy<6> (Mcompar_y_cmp_gt0000_cy<6>)
+     LUT3:I0->O           11   0.704   1.012  y<2>1 (y<2>)
+     LUT2:I1->O            1   0.704   0.000  attack/Msub__sub0009_lut<2> (attack/Msub__sub0009_lut<2>)
+     XORCY:LI->O           3   0.527   0.706  attack/Msub__sub0009_xor<2> (attack/_sub0009<2>)
+     LUT1:I0->O            1   0.704   0.000  attack/Msub_mult0009_addsub0000_cy<2>_rt (attack/Msub_mult0009_addsub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.464   0.000  attack/Msub_mult0009_addsub0000_cy<2> (attack/Msub_mult0009_addsub0000_cy<2>)
+     XORCY:CI->O           3   0.804   0.610  attack/Msub_mult0009_addsub0000_xor<3> (attack/mult0009_addsub0000<3>)
+     LUT2:I1->O            1   0.704   0.000  attack/Mmult_mult0009_mult0000_Madd1_lut<3> (attack/Mmult_mult0009_mult0000_Madd1_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  attack/Mmult_mult0009_mult0000_Madd1_cy<3> (attack/Mmult_mult0009_mult0000_Madd1_cy<3>)
+     XORCY:CI->O           1   0.804   0.499  attack/Mmult_mult0009_mult0000_Madd1_xor<4> (attack/Mmult_mult0009_mult0000_Madd_41)
+     LUT2:I1->O            1   0.704   0.000  attack/Mmult_mult0009_mult0000_Madd2_lut<4> (attack/Mmult_mult0009_mult0000_Madd2_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  attack/Mmult_mult0009_mult0000_Madd2_cy<4> (attack/Mmult_mult0009_mult0000_Madd2_cy<4>)
+     XORCY:CI->O           1   0.804   0.455  attack/Mmult_mult0009_mult0000_Madd2_xor<5> (attack/mult0009_mult0000<5>)
+     LUT3:I2->O            1   0.704   0.000  attack/Madd_COND_15_addsub0000_Madd_lut<5> (attack/Madd_COND_15_addsub0000_Madd_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  attack/Madd_COND_15_addsub0000_Madd_cy<5> (attack/Madd_COND_15_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.804   0.499  attack/Madd_COND_15_addsub0000_Madd_xor<6> (attack/COND_15_addsub0000<6>)
+     LUT2:I1->O            1   0.704   0.000  attack/Msub_COND_15_addsub0001_Madd_lut<6> (attack/Msub_COND_15_addsub0001_Madd_lut<6>)
+     XORCY:LI->O           5   0.527   0.633  attack/Msub_COND_15_addsub0001_Madd_xor<6> (attack/Msub__COND_15_Madd_cy<6>)
+     INV:I->O              3   0.704   0.531  attack/Msub__COND_15_Madd_xor<6>11_INV_0 (attack/_COND_15<6>)
+     MUXF6:S->O            1   0.850   0.424  attack/Mrom__varindex0009251_9_f6 (attack/Mrom__varindex0009251_9_f6)
+     LUT4:I3->O            1   0.704   0.424  attack/area_and0012462_SW0 (N416)
+     LUT4_L:I3->LO         1   0.704   0.104  attack/area_and0012474 (attack/area_and0012474)
+     LUT4:I3->O            1   0.704   0.424  attack/area_and0012505 (attack/area_and0012505)
+     LUT4_D:I3->LO         1   0.704   0.104  attack/area_and0012691 (N914)
+     LUT4:I3->O           11   0.704   0.937  attack/area<2>35 (area<2>)
+     LUT4:I3->O            3   0.704   0.535  R_and000111 (N109)
+     LUT4_L:I3->LO         1   0.704   0.104  G_mux000012 (G_mux000012)
+     LUT4:I3->O            2   0.704   0.451  G_mux000035 (G_mux000035)
+     LUT4:I3->O            1   0.704   0.000  G_mux000115_G (N676)
+     MUXF5:I1->O           1   0.321   0.424  G_mux000115 (G_mux000115)
+     LUT4:I3->O            1   0.704   0.000  G_mux0001117 (G_mux0001)
+     FDS:D                     0.308          G
+    ----------------------------------------
+    Total                     34.091ns (22.731ns logic, 11.360ns route)
+                                       (66.7% logic, 33.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sec_cnt_181'
+  Clock period: 26.714ns (frequency: 37.433MHz)
+  Total number of paths / destination ports: 66597027 / 102
+-------------------------------------------------------------------------
+Delay:               26.714ns (Levels of Logic = 26)
+  Source:            ship_Y_0 (FF)
+  Destination:       die (FF)
+  Source Clock:      sec_cnt_181 rising
+  Destination Clock: sec_cnt_181 rising
+
+  Data Path: ship_Y_0 to die
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             36   0.591   1.438  ship_Y_0 (ship_Y_0)
+     LUT1:I0->O            1   0.704   0.000  death/Msub__sub0006_cy<0>_rt (death/Msub__sub0006_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  death/Msub__sub0006_cy<0> (death/Msub__sub0006_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  death/Msub__sub0006_cy<1> (death/Msub__sub0006_cy<1>)
+     XORCY:CI->O           1   0.804   0.595  death/Msub__sub0006_xor<2> (death/_sub0006<2>)
+     LUT2:I0->O            1   0.704   0.000  death/Msub_mult0002_addsub0000_lut<2> (death/Msub_mult0002_addsub0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  death/Msub_mult0002_addsub0000_cy<2> (death/Msub_mult0002_addsub0000_cy<2>)
+     XORCY:CI->O           3   0.804   0.610  death/Msub_mult0002_addsub0000_xor<3> (death/mult0002_addsub0000<3>)
+     LUT2:I1->O            1   0.704   0.000  death/Mmult_mult0002_mult0000_Madd1_lut<3> (death/Mmult_mult0002_mult0000_Madd1_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  death/Mmult_mult0002_mult0000_Madd1_cy<3> (death/Mmult_mult0002_mult0000_Madd1_cy<3>)
+     XORCY:CI->O           1   0.804   0.595  death/Mmult_mult0002_mult0000_Madd1_xor<4> (death/Mmult_mult0002_mult0000_Madd_41)
+     LUT2:I0->O            1   0.704   0.000  death/Mmult_mult0002_mult0000_Madd2_lut<4> (death/Mmult_mult0002_mult0000_Madd2_lut<4>)
+     XORCY:LI->O           1   0.527   0.595  death/Mmult_mult0002_mult0000_Madd2_xor<4> (death/mult0002_mult0000<4>)
+     LUT2:I0->O            1   0.704   0.000  death/Madd_COND_9_addsub0000_Madd_lut<4> (death/Madd_COND_9_addsub0000_Madd_lut<4>)
+     XORCY:LI->O           2   0.527   0.622  death/Madd_COND_9_addsub0000_Madd_xor<4> (death/Msub_COND_9_addsub0001_Madd_lut<4>)
+     LUT4:I0->O            1   0.704   0.595  death/Msub_COND_9_addsub0001_Madd_xor<4>11 (death/COND_9_addsub0001<4>)
+     LUT2:I0->O            1   0.704   0.000  death/Madd__COND_9_Madd_lut<4> (death/Madd__COND_9_Madd_lut<4>)
+     XORCY:LI->O          14   0.527   1.000  death/Madd__COND_9_Madd_xor<4> (death/_COND_9<4>)
+     MUXF5:S->O            1   0.739   0.499  death/Mrom__varindex0003251_14 (death/Mrom__varindex0003251_14)
+     LUT4_L:I1->LO         1   0.704   0.135  death/area_and0012557 (death/area_and0012557)
+     LUT3:I2->O            1   0.704   0.455  death/area_and0012564 (death/area_and0012564)
+     LUT4_L:I2->LO         1   0.704   0.179  death/area_and0012586 (death/area_and0012586)
+     LUT4:I1->O            1   0.704   0.455  death/area_and0012685 (death/area_and0012685)
+     LUT4_D:I2->LO         1   0.704   0.104  death/area_and0012726 (N896)
+     LUT4:I3->O            1   0.704   0.424  died185_SW0_SW0 (N793)
+     LUT4_L:I3->LO         1   0.704   0.104  died185_SW0 (N765)
+     LUT4:I3->O            1   0.704   0.420  died185 (died)
+     FDCE:CE                   0.555          die
+    ----------------------------------------
+    Total                     26.714ns (17.889ns logic, 8.825ns route)
+                                       (67.0% logic, 33.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 618 / 39
+-------------------------------------------------------------------------
+Offset:              12.375ns (Levels of Logic = 10)
+  Source:            rst (PAD)
+  Destination:       G (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to G
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           255   1.218   1.368  rst_IBUF (rst_IBUF)
+     LUT3:I2->O            1   0.704   0.595  attack/area_and0002150_SW1 (N451)
+     LUT4:I0->O            2   0.704   0.482  attack/area<2>24 (attack/area<2>24)
+     LUT4:I2->O           11   0.704   0.937  attack/area<2>35 (area<2>)
+     LUT4:I3->O            3   0.704   0.535  R_and000111 (N109)
+     LUT4_L:I3->LO         1   0.704   0.104  G_mux000012 (G_mux000012)
+     LUT4:I3->O            2   0.704   0.451  G_mux000035 (G_mux000035)
+     LUT4:I3->O            1   0.704   0.000  G_mux000115_G (N676)
+     MUXF5:I1->O           1   0.321   0.424  G_mux000115 (G_mux000115)
+     LUT4:I3->O            1   0.704   0.000  G_mux0001117 (G_mux0001)
+     FDS:D                     0.308          G
+    ----------------------------------------
+    Total                     12.375ns (7.479ns logic, 4.896ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sec_cnt_181'
+  Total number of paths / destination ports: 182 / 25
+-------------------------------------------------------------------------
+Offset:              8.866ns (Levels of Logic = 16)
+  Source:            rst (PAD)
+  Destination:       bull_Y_11 (FF)
+  Destination Clock: sec_cnt_181 rising
+
+  Data Path: rst to bull_Y_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           255   1.218   1.337  rst_IBUF (rst_IBUF)
+     LUT4:I3->O           35   0.704   1.438  bull_X_not00011 (bull_X_not0001)
+     LUT3:I0->O            1   0.704   0.595  bull_Y_mux0001<0>1 (bull_Y_mux0001<0>)
+     LUT2:I0->O            1   0.704   0.000  Maddsub_bull_Y_mux0000_lut<0> (Maddsub_bull_Y_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_bull_Y_mux0000_cy<0> (Maddsub_bull_Y_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<1> (Maddsub_bull_Y_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<2> (Maddsub_bull_Y_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<3> (Maddsub_bull_Y_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<4> (Maddsub_bull_Y_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<5> (Maddsub_bull_Y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<6> (Maddsub_bull_Y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<7> (Maddsub_bull_Y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<8> (Maddsub_bull_Y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_bull_Y_mux0000_cy<9> (Maddsub_bull_Y_mux0000_cy<9>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_bull_Y_mux0000_cy<10> (Maddsub_bull_Y_mux0000_cy<10>)
+     XORCY:CI->O           3   0.804   0.000  Maddsub_bull_Y_mux0000_xor<11> (bull_Y_mux0000<11>)
+     FDCP:D                    0.308          bull_Y_11
+    ----------------------------------------
+    Total                      8.866ns (5.496ns logic, 3.370ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 55 / 5
+-------------------------------------------------------------------------
+Offset:              9.222ns (Levels of Logic = 9)
+  Source:            col_0 (FF)
+  Destination:       VGA_HSYNC (PAD)
+  Source Clock:      clk rising
+
+  Data Path: col_0 to VGA_HSYNC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             36   0.591   1.438  col_0 (col_0)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_lut<0>1 (Mcompar_VGA_HSYNC_cmp_ge0000_lut<0>1)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_cy<0>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<0>1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_cy<1>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<1>1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_cy<2>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<2>1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_cy<3>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<3>1)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_HSYNC_cmp_ge0000_cy<4>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<4>1)
+     MUXCY:CI->O          13   0.331   1.062  Mcompar_VGA_HSYNC_cmp_ge0000_cy<5>_0 (Mcompar_VGA_HSYNC_cmp_ge0000_cy<5>1)
+     LUT2:I1->O            1   0.704   0.420  VGA_HSYNC1 (VGA_HSYNC_OBUF)
+     OBUF:I->O                 3.272          VGA_HSYNC_OBUF (VGA_HSYNC)
+    ----------------------------------------
+    Total                      9.222ns (6.302ns logic, 2.920ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 52.00 secs
+Total CPU time to Xst completion: 52.16 secs
+ 
+--> 
+
+Total memory usage is 387628 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+
